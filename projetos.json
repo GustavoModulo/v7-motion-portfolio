@@ -1,0 +1,199 @@
+[
+  {
+    "id": 1,
+    "tipo": "galeria",
+    "titulo": "Gustavo Modulo #72",
+    "categoria": "S15 • Assetto Corsa • Ensaio",
+    "descricao": "Ensaio completo do Nissan Silvia S15 #72 preparado para a temporada 2026 da Extreme Drift Nations. Captura de detalhes, livery e action shots em ângulo no Assetto Corsa.",
+    "imagem_fundo": "./imagens/Gustavo Principal.jpg",
+    "cor_destaque": "cyan",
+    "fotos": [
+      "./imagens/S15-1.jpg",
+      "./imagens/S15-2.jpg",
+      "./imagens/S15-3.jpg",
+      "./imagens/S15-4.jpg",
+      "./imagens/S15-5.jpg"
+    ]
+  },
+
+  {
+    "id": 2,
+    "tipo": "video",
+    "titulo": "Arthur Higa",
+    "categoria": "WekFestival • Aldeia da Serra",
+    "descricao": "Cobertura completa do Arthur Higa. Muita fumaça, ângulo e um show capturado direto de Aldeia da Serra!",
+    "video_fundo": "./imagens/ArthurHigaVideo1.mp4",
+    "cor_destaque": "red",
+    "link_video": "https://www.youtube.com/watch?v=9OOEVEBwd7U"
+  },
+
+  {
+    "id": 3,
+    "tipo": "video",
+    "titulo": "Giovane Escudeiro",
+    "formato": "vertical",
+    "categoria": "Escola de Drift • 350Z",
+    "descricao": "Video editado para o Giovane Escudeiro. Aula de drift, momentos incriveis capturado em Kartodromo de Registro!",
+    "imagem_fundo": "./imagens/GiovaneEscudeiroVideo1.mp4",
+    "cor_destaque": "red",
+    "link_video": "https://www.instagram.com/p/DSnDPyoEUjG/",
+    "video_fundo": "./imagens/GiovaneEscudeiroVideo1.mp4"
+  },
+
+  {
+    "id": 4,
+    "tipo": "video",
+    "titulo": "Cinematic M4 G82",
+    "categoria": "Grand Theft Auto V • G82 Widebody",
+    "descricao": "Cinematic produzida dentro do GTA V, BMW M4 G82 em destaque.",
+    "video_fundo": "./imagens/BMW_M4.mp4",
+    "cor_destaque": "cyan",
+    "link_video": "https://www.youtube.com/watch?v=4uaPKzBaMoU"
+  },
+
+  {
+    "id": 5,
+    "tipo": "video",
+    "titulo": "Cinematic GTA V - R34 X EVO ",
+    "categoria": "FiveM • LasanhaHunters",
+    "descricao": "Cinematic produzida dentro do GTA V, em parceira com o servidor de FiveM Lasanha Hunters, cenas dinâmicas, corridas e ângulos cinematográficos.",
+    "video_fundo": "./imagens/R34xEVO.mp4",
+    "cor_destaque": "cyan",
+    "link_video": "https://www.youtube.com/watch?v=txtSHUadcUI&t=21s"
+  },
+
+  {
+    "id": 6,
+    "tipo": "video",
+    "titulo": "Cinematic GTA V - Silvia S15 ",
+    "categoria": "Drift • Missile Cars",
+    "descricao": "Cinematic produzida dentro do GTA V, cenas de drift produzidas com o carro Silvia S15 no estilo Missile.",
+    "video_fundo": "./imagens/SilviaS15.mp4",
+    "cor_destaque": "cyan",
+    "link_video": "https://www.youtube.com/watch?v=JX8Wzb_w9bc"
+  },
+
+  {
+    "id": 7,
+    "tipo": "video",
+    "titulo": "Cinematic Assetto Corsa - M4 F82 ",
+    "categoria": "Drift • Cenas de Rolling",
+    "descricao": "Cinematic feita no Assetto Corsa, cenas de drift, aceleros, transições cleans.",
+    "video_fundo": "./imagens/M4F82.mp4",
+    "cor_destaque": "cyan",
+    "link_video": "https://www.youtube.com/watch?v=dApilnnR5cg"
+  },
+
+  {
+    "id": 8,
+    "tipo": "video",
+    "titulo": "Juba Giarreta ",
+    "formato": "vertical",
+    "categoria": "Drift • Racing Track",
+    "descricao": "Video feito para o Juba Giarreta, imagens capturadas no evento Racing Track.",
+    "video_fundo": "./imagens/JubaGiarreta.mp4",
+    "cor_destaque": "red",
+    "link_video": "https://www.tiktok.com/@jubagiarreta/video/7611254571788274962?is_from_webapp=1&sender_device=pc&web_id=7573712846980285959"
+  },
+
+  {
+    "id": 9,
+    "tipo": "video",
+    "titulo": "Assetto Labz ",
+    "categoria": "Cinematic • Patreon",
+    "descricao": "Cinematic feita para o Giovane Escudeiro, imagens capturadas para vender o trabalho dele.",
+    "video_fundo": "./imagens/AssettoLabzS15.mp4",
+    "cor_destaque": "cyan",
+    "link_video": "https://youtu.be/KouHqORFxD8"
+  },
+
+  {
+    "id": 10,
+    "tipo": "galeria",
+    "titulo": "Renata Ciaga",
+    "formato": "focado",
+    "categoria": "Fotos",
+    "descricao": "Fotos tiradas da Renata em um evento automobilistico.",
+    "imagem_fundo": "./imagens/Renata3.jpg",
+    "cor_destaque": "red",
+    "fotos": [
+      "./imagens/Renata1.jpg",
+      "./imagens/Renata2.jpg",
+      "./imagens/Renata3.jpg"
+    ]
+  },
+
+  {
+    "id": 11,
+    "tipo": "galeria",
+    "titulo": "Gabriel Palito",
+    "formato": "focado",
+    "categoria": "Fotos",
+    "descricao": "Fotos tiradas do Palito em um evento automobilistico.",
+    "imagem_fundo": "./imagens/Palito1.jpg",
+    "cor_destaque": "red",
+    "fotos": [
+      "./imagens/Palito1.jpg"
+    ]
+  },
+
+  {
+    "id": 12,
+    "tipo": "galeria",
+    "titulo": "Juba Giarreta",
+    "formato": "focado",
+    "categoria": "Fotos",
+    "descricao": "Fotos tiradas do Juba e do seu 370Z em um evento da Racing Track.",
+    "imagem_fundo": "./imagens/Juba2.jpg",
+    "cor_destaque": "red",
+    "fotos": [
+      "./imagens/Juba1.jpg",
+      "./imagens/Juba2.jpg",
+      "./imagens/Juba3.jpg",
+      "./imagens/Juba4.jpg",
+      "./imagens/Juba5.jpg",
+      "./imagens/Juba6.jpg",
+      "./imagens/Juba7.jpg",
+      "./imagens/Juba8.jpg",
+      "./imagens/Juba9.jpg",
+      "./imagens/Juba10.jpg",
+      "./imagens/Juba11.jpg",
+      "./imagens/Juba12.jpg"
+    ]
+  },
+
+  {
+    "id": 13,
+    "tipo": "galeria",
+    "titulo": "Fusco",
+    "formato": "focado",
+    "categoria": "Fotos",
+    "descricao": "Ensaio fotográfico do civic turbo do Fusco em um evento da Racing Track.",
+    "imagem_fundo": "./imagens/CivicFusco1.jpg",
+    "cor_destaque": "red",
+    "fotos": [
+      "./imagens/CivicFusco1.jpg",
+      "./imagens/CivicFusco2.jpg",
+      "./imagens/CivicFusco3.jpg",
+      "./imagens/CivicFusco4.jpg",
+      "./imagens/CivicFusco5.jpg"
+    ]
+  },
+
+  {
+    "id": 14,
+    "tipo": "galeria",
+    "titulo": "Diego Higa",
+    "formato": "focado",
+    "categoria": "Fotos",
+    "descricao": "Fotos tirada do Diego Higa em um evento da JDM.",
+    "imagem_fundo": "./imagens/DiegoHiga1.jpg",
+    "cor_destaque": "red",
+    "fotos": [
+      "./imagens/DiegoHiga1.jpg",
+      "./imagens/DiegoHiga2.jpg",
+      "./imagens/DiegoHiga3.jpg"
+    ]
+  }
+]
+

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="V7 Motion | Portfólio de audiovisual automotivo. Especialista em filmagens de drift real e cinematics de alto impacto no simulador.">
+  <title>V7 Motion | Audiovisual Automotivo</title>
+  <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="bg-black text-white font-sans antialiased overflow-x-hidden selection:bg-red-600 selection:text-white">
+
+  <nav class="fixed top-0 w-full z-40 px-8 py-6 bg-gradient-to-b from-black/90 to-transparent backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <a href="#inicio" class="flex items-center hover:opacity-80 transition-opacity">
+        <img src="./imagens/logo-v7.png" alt="Logo V7 Motion" class="h-10 w-auto">
+      </a>
+      
+      <div class="hidden md:flex gap-10 text-xs font-bold tracking-[0.2em] uppercase">
+        <a href="#sobre" class="hover:text-cyan-400 transition-colors">Sobre</a>
+        <a href="#projetos-wrapper" class="hover:text-red-500 transition-colors">Portfólio</a>
+        <a href="#contato" class="hover:text-gray-400 transition-colors">Contato</a>
+      </div>
+      
+      <div class="flex items-center gap-5">
+        <a href="https://instagram.com/v7motion" target="_blank" class="hover:text-red-600 transition-colors cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <a href="https://www.youtube.com/@V7.motion" target="_blank" class="hover:text-red-600 transition-colors cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.13 1 12 1 12s0 3.87.54 5.58a2.78 2.78 0 0 0 1.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.87 23 12 23 12s0-3.87-.54-5.58z"></path>
+            <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon>
+          </svg>
+        </a>
+        <a href="https://www.tiktok.com/@kingzdk" target="_blank" class="hover:text-red-600 transition-colors cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5v3a8 8 0 0 1-5-1.5z"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="inicio" class="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden bg-black">
+    <div id="hero-slides" class="absolute inset-0 w-full h-full z-0">
+      <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('./imagens/sua-foto-1.jpg'); opacity: 1; transition: opacity 1.5s ease-in-out;"></div>
+      <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('./imagens/sua-foto-2.jpg'); opacity: 0; transition: opacity 1.5s ease-in-out;"></div>
+      <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('./imagens/sua-foto-3.jpg'); opacity: 0; transition: opacity 1.5s ease-in-out;"></div>
+    </div>
+    <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black to-transparent pointer-events-none z-10"></div>
+    <div class="relative text-center flex flex-col items-center mt-20 z-20">
+      <h1 class="flex items-center justify-center gap-4 md:gap-6 text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter drop-shadow-2xl mb-2">
+        <img src="./imagens/logo-v7.png" alt="V7" class="h-16 md:h-28 lg:h-40 w-auto object-contain drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)]">
+        <span class="text-red-600 drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)]">Motion</span>
+      </h1>
+      <h2 class="text-2xl md:text-4xl font-light italic text-gray-200 tracking-widest mb-6 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">Audiovisual</h2>
+      <div class="flex items-center gap-4 text-xs md:text-sm font-mono tracking-[0.3em] uppercase text-gray-300 bg-black/50 px-6 py-2 rounded-full border border-white/10 backdrop-blur-md shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+        <span class="text-red-500 drop-shadow-[0_0_8px_rgba(239,68,68,0.8)]">Real</span> • <span>Cinematics</span> • <span class="text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]">Virtual</span>
+      </div>
+    </div>
+  </header>
+
+  <section id="sobre" class="relative w-full py-32 bg-zinc-950 px-8 md:px-24 flex flex-col md:flex-row items-center justify-center gap-16 border-t border-zinc-900 z-20">
+    <div class="w-64 h-64 md:w-80 md:h-80 shrink-0 overflow-hidden border border-zinc-800 rounded-xl shadow-[0_0_30px_rgba(220,38,38,0.1)]">
+       <img src="./imagens/Vinicius.jpg" alt="Retrato do Filmmaker" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+    </div>
+    <div class="max-w-2xl">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="w-8 h-[2px] bg-red-600"></div>
+        <p class="text-zinc-500 font-mono text-xs tracking-[0.3em] uppercase">O Produtor</p>
+      </div>
+      <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tight mb-6">A Lente por trás da <span class="text-red-600"><br>V7 Motion</span></h2>
+      <p class="text-gray-300 leading-relaxed mb-8 text-lg font-light">
+        Sou especialista em capturar a essência da cultura automotiva. Meu foco é traduzir a velocidade, a fumaça e a adrenalina das pistas em takes cinematográficos de alto impacto. Transito entre os eventos reais de drift e o cenário competitivo do sim-racing, entregando um visual único para pilotos e equipes.
+      </p>
+    </div>
+  </section>
+
+  <main id="projetos-wrapper" class="w-full pt-24 border-t border-zinc-900 min-h-screen bg-black relative z-20">
+    
+    <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-8 px-6 relative z-30">
+      <button id="btn-tab-real" onclick="mudarAba('real')" class="px-8 py-4 font-mono text-sm md:text-base tracking-[0.3em] uppercase border transition-all duration-300 backdrop-blur-sm border-red-500 text-red-500 bg-red-500/10 shadow-[0_0_15px_rgba(239,68,68,0.3)] cursor-pointer">
+        Vida Real
+      </button>
+      <button id="btn-tab-virtual" onclick="mudarAba('virtual')" class="px-8 py-4 font-mono text-sm md:text-base tracking-[0.3em] uppercase border transition-all duration-300 backdrop-blur-sm border-zinc-800 text-zinc-500 hover:border-cyan-400/50 hover:text-cyan-400 bg-transparent cursor-pointer">
+        Simulador
+      </button>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-4 mb-16 px-6 relative z-30">
+      <button id="btn-filtro-video" onclick="mudarFiltro('video')" class="px-6 py-2 bg-white text-black font-bold uppercase tracking-widest text-xs transition-colors rounded-full cursor-pointer">Vídeos</button>
+      <button id="btn-filtro-galeria" onclick="mudarFiltro('galeria')" class="px-6 py-2 bg-transparent border border-zinc-700 text-zinc-500 hover:border-white hover:text-white font-bold uppercase tracking-widest text-xs transition-colors rounded-full cursor-pointer">Fotos</button>
+    </div>
+
+    <div id="projetos-container" class="w-full flex flex-col"></div>
+  </main>
+
+  <section id="contato" class="relative w-full py-32 bg-zinc-950 flex flex-col items-center px-6 border-t border-white/5 z-20">
+    <div class="max-w-3xl w-full">
+      <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4 text-center">Bora Gravar?</h2>
+      <p class="text-gray-400 text-center mb-16 text-lg font-light">Sua equipe merece um material de alto nível.</p>
+      
+      <form id="form-whatsapp" onsubmit="enviarWhatsApp(event)" class="flex flex-col gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <input type="text" id="wa-nome" required class="w-full bg-transparent border-b border-zinc-800 pb-4 text-white focus:outline-none focus:border-red-600 transition-colors placeholder-zinc-600 uppercase tracking-widest text-xs" placeholder="Seu Nome / Equipe">
+          <input type="text" id="wa-projeto" required class="w-full bg-transparent border-b border-zinc-800 pb-4 text-white focus:outline-none focus:border-red-600 transition-colors placeholder-zinc-600 uppercase tracking-widest text-xs" placeholder="Tipo de Projeto (Ex: Evento, Reels)">
+        </div>
+        <textarea id="wa-mensagem" required rows="2" class="w-full bg-transparent border-b border-zinc-800 pb-4 text-white focus:outline-none focus:border-red-600 transition-colors placeholder-zinc-600 uppercase tracking-widest text-xs resize-none" placeholder="Qual a ideia do projeto? Me conte os detalhes..."></textarea>
+        
+        <div class="flex justify-center mt-8">
+          <button type="submit" class="flex items-center gap-3 px-12 py-4 bg-white text-black font-black uppercase tracking-[0.2em] hover:bg-[#25D366] hover:text-white transition-all duration-300 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.305-.883-.653-1.48-1.459-1.653-1.756-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            Chamar no WhatsApp
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="bg-black py-12 border-t border-zinc-900 flex flex-col md:flex-row items-center justify-between px-8 md:px-24 z-20 relative gap-6">
+    <p class="text-xs font-mono text-zinc-600 uppercase tracking-widest">© 2026 V7 Motion.</p>
+    
+    <div class="flex items-center gap-4 text-xs font-mono text-zinc-600 uppercase tracking-widest">
+      <span>Code by <span class="text-zinc-400">Gustavo Modulo</span></span>
+      <span class="text-zinc-800">|</span>
+      <a href="https://github.com/GustavoModulo" target="_blank" class="hover:text-white transition-colors cursor-pointer">GitHub</a>
+      <span class="text-zinc-800">|</span>
+      <a href="https://www.linkedin.com/in/gustavo-modulo/?locale=pt_BR" target="_blank" class="hover:text-white transition-colors cursor-pointer">LinkedIn</a>
+    </div>
+  </footer>
+
+  <div id="modal-galeria" class="fixed inset-0 bg-black/95 hidden flex-col items-center justify-start overflow-y-auto pt-24 pb-12 px-6 opacity-0 transition-opacity duration-300" style="z-index: 9999;">
+    <button onclick="fecharGaleria()" class="fixed top-8 right-8 text-zinc-400 hover:text-white bg-zinc-900 rounded-full p-2 transition-colors cursor-pointer" style="z-index: 10000;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <div class="max-w-5xl w-full text-center mb-12">
+      <h3 id="modal-titulo" class="text-4xl md:text-6xl font-black uppercase tracking-tight text-white mb-3"></h3>
+      <p id="modal-categoria" class="text-red-500 font-mono text-sm tracking-widest uppercase"></p>
+    </div>
+    <div id="modal-grid" class="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+
+  <div id="modal-lightbox" onclick="fecharLightbox()" class="fixed inset-0 bg-black/98 hidden flex-col items-center justify-center p-4 opacity-0 transition-opacity duration-300 cursor-zoom-out" style="z-index: 10001;">
+    <button onclick="fecharLightbox()" class="absolute top-8 right-8 text-zinc-400 hover:text-white bg-zinc-900 rounded-full p-2 transition-colors cursor-pointer" style="z-index: 10002;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+    <img id="lightbox-img" src="" alt="Foto Ampliada" onclick="event.stopPropagation()" class="max-w-full max-h-full object-contain rounded shadow-2xl cursor-default">
+  </div>
+
+  <script>
+    let projetosGlobais = [];
+    let abaAtual = 'real'; 
+    let filtroAtual = 'video'; 
+
+    function iniciarSlideshow() {
+      const slides = document.querySelectorAll('#hero-slides .slide');
+      if (slides.length <= 1) return;
+      let slideAtual = 0;
+      setInterval(() => {
+        slides[slideAtual].style.opacity = "0";
+        slideAtual = (slideAtual + 1) % slides.length;
+        slides[slideAtual].style.opacity = "1";
+      }, 4000); 
+    }
+
+    function mudarAba(aba) {
+      abaAtual = aba;
+      filtroAtual = 'video'; 
+      atualizarBotoes();
+      renderizarProjetos();
+    }
+
+    function mudarFiltro(filtro) {
+      filtroAtual = filtro;
+      atualizarBotoes();
+      renderizarProjetos();
+    }
+
+    function atualizarBotoes() {
+      const btnReal = document.getElementById('btn-tab-real');
+      const btnVirtual = document.getElementById('btn-tab-virtual');
+      const clAtivaV = "px-8 py-4 font-mono text-sm md:text-base tracking-[0.3em] uppercase border transition-all duration-300 backdrop-blur-sm border-red-500 text-red-500 bg-red-500/10 shadow-[0_0_15px_rgba(239,68,68,0.3)] cursor-pointer";
+      const clInativaV = "px-8 py-4 font-mono text-sm md:text-base tracking-[0.3em] uppercase border transition-all duration-300 backdrop-blur-sm border-zinc-800 text-zinc-500 hover:border-red-500/50 hover:text-red-400 bg-transparent cursor-pointer";
+      const clAtivaC = "px-8 py-4 font-mono text-sm md:text-base tracking-[0.3em] uppercase border transition-all duration-300 backdrop-blur-sm border-cyan-400 text-cyan-400 bg-cyan-400/10 shadow-[0_0_15px_rgba(34,211,238,0.3)] cursor-pointer";
+      const clInativaC = "px-8 py-4 font-mono text-sm md:text-base tracking-[0.3em] uppercase border transition-all duration-300 backdrop-blur-sm border-zinc-800 text-zinc-500 hover:border-cyan-400/50 hover:text-cyan-400 bg-transparent cursor-pointer";
+
+      if (abaAtual === 'real') {
+        btnReal.className = clAtivaV;
+        btnVirtual.className = clInativaC;
+      } else {
+        btnReal.className = clInativaV;
+        btnVirtual.className = clAtivaC;
+      }
+
+      const btnVideo = document.getElementById('btn-filtro-video');
+      const btnGaleria = document.getElementById('btn-filtro-galeria');
+      const clFiltroAtivo = "px-6 py-2 bg-white text-black font-bold uppercase tracking-widest text-xs transition-colors rounded-full cursor-pointer";
+      const clFiltroInativo = "px-6 py-2 bg-transparent border border-zinc-700 text-zinc-500 hover:border-white hover:text-white font-bold uppercase tracking-widest text-xs transition-colors rounded-full cursor-pointer";
+
+      btnVideo.className = (filtroAtual === 'video') ? clFiltroAtivo : clFiltroInativo;
+      btnGaleria.className = (filtroAtual === 'galeria') ? clFiltroAtivo : clFiltroInativo;
+    }
+
+    async function carregarProjetos() {
+      try {
+        const resposta = await fetch('./projetos.json');
+        projetosGlobais = await resposta.json();
+        atualizarBotoes();
+        renderizarProjetos();
+      } catch (erro) {
+        console.error("Erro:", erro);
+        document.getElementById('projetos-container').innerHTML = '<p class="text-center py-20 text-red-500">Erro ao carregar projetos!</p>';
+      }
+    }
+
+    function renderizarProjetos() {
+      const container = document.getElementById('projetos-container');
+      
+      const filtrados = projetosGlobais.filter(projeto => {
+        const isReal = projeto.cor_destaque === 'red';
+        if (abaAtual === 'real' && !isReal) return false;
+        if (abaAtual === 'virtual' && isReal) return false;
+        if (projeto.tipo !== filtroAtual) return false; 
+        return true;
+      });
+
+      if (filtrados.length === 0) {
+        container.innerHTML = '<p class="text-center py-20 text-gray-500 font-mono tracking-widest uppercase">Nenhum projeto encontrado nesta categoria.</p>';
+        return;
+      }
+
+      let htmlFinal = '';
+
+      filtrados.forEach((projeto, index) => {
+        const isReal = projeto.cor_destaque === 'red';
+        const ehPar = index % 2 === 0;
+        const alinhamento = ehPar ? 'justify-end items-start text-left' : 'justify-end items-end text-right';
+        const gradiente = ehPar ? 'bg-gradient-to-r from-black/95 via-black/60 to-transparent' : 'bg-gradient-to-l from-black/95 via-black/60 to-transparent';
+        const corTexto = isReal ? 'text-red-500' : 'text-cyan-400';
+        const corBg = isReal ? 'bg-red-600' : 'bg-cyan-500';
+        const formato = projeto.formato || 'horizontal';
+
+        let botaoHTML = '';
+        if (projeto.tipo === 'video') {
+          botaoHTML = `<a href="${projeto.link_video}" target="_blank" class="px-8 py-3 bg-transparent border border-white hover:bg-white hover:text-black font-bold uppercase tracking-widest text-sm transition-all inline-block mt-4 cursor-pointer" style="position: relative; z-index: 50; pointer-events: auto;">Assistir Vídeo</a>`;
+        } else if (projeto.tipo === 'galeria') {
+          botaoHTML = `<button onclick="abrirGaleria(${projeto.id})" class="px-8 py-3 bg-transparent border border-white hover:bg-white hover:text-black font-bold uppercase tracking-widest text-sm transition-all inline-block mt-4 cursor-pointer" style="position: relative; z-index: 50; pointer-events: auto;">Ver Ensaio Completo</button>`;
+        }
+
+        let fundoHTML = '';
+        
+       
+        if (projeto.video_fundo) {
+          if (formato === 'vertical' || formato === 'focado') {
+            fundoHTML = `
+              <div class="absolute inset-0 w-full h-full bg-black overflow-hidden pointer-events-none" style="z-index: 1;">
+                <video loop muted autoplay playsinline class="video-otimizado absolute inset-0 w-full h-full" style="object-fit: cover; opacity: 0.4; filter: blur(30px); transform: scale(1.1); z-index: 1;">
+                  <source src="${projeto.video_fundo}" type="video/mp4">
+                </video>
+                
+                <video loop muted autoplay playsinline class="video-otimizado absolute inset-0 w-full h-full m-auto" style="object-fit: contain; z-index: 2;">
+                  <source src="${projeto.video_fundo}" type="video/mp4">
+                </video>
+              </div>
+            `;
+          } else {
+            
+            fundoHTML = `
+              <video loop muted autoplay playsinline class="video-otimizado absolute inset-0 w-full h-full" style="object-fit: cover; opacity: 0.6; z-index: 1;">
+                <source src="${projeto.video_fundo}" type="video/mp4">
+              </video>
+            `;
+          }
+        } else {
+         
+          if (formato === 'vertical' || formato === 'focado') {
+            fundoHTML = `
+              <div class="absolute inset-0 w-full h-full bg-black overflow-hidden pointer-events-none" style="z-index: 1;">
+                <div class="absolute inset-0 w-full h-full" style="background-image: url('${projeto.imagem_fundo}'); background-size: cover; background-position: center; opacity: 0.3; filter: blur(30px); transform: scale(1.1); z-index: 1;"></div>
+                <img src="${projeto.imagem_fundo}" alt="Capa" loading="lazy" class="absolute inset-0 w-full h-full m-auto" style="object-fit: contain; z-index: 2;">
+              </div>
+            `;
+          } else {
+            fundoHTML = `
+              <div class="absolute inset-0 w-full h-full" style="background-image: url('${projeto.imagem_fundo}'); background-size: cover; background-position: center; opacity: 0.6; z-index: 1;"></div>
+            `;
+          }
+        }
+
+        const chunkHTML = `
+          <section class="relative w-full h-screen flex flex-col justify-center ${alinhamento} pb-24 md:pb-32 px-8 md:px-24 mb-1 overflow-hidden bg-black">
+            ${fundoHTML}
+            <div class="absolute inset-0 ${gradiente}" style="z-index: 3; pointer-events: none;"></div>
+            
+            <div class="max-w-3xl flex flex-col ${ehPar ? 'items-start' : 'items-end'}" style="position: relative; z-index: 10; pointer-events: none;">
+              <div class="flex items-center gap-4 mb-6 ${!ehPar ? 'flex-row-reverse' : ''}">
+                <div class="w-12 h-[2px] ${corBg} shadow-[0_0_10px_rgba(0,0,0,0.8)]"></div>
+                <p class="${corTexto} font-mono text-xs md:text-sm tracking-[0.3em] uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] font-bold">${projeto.categoria}</p>
+              </div>
+              <h2 class="text-5xl md:text-8xl font-black uppercase tracking-tight mb-4 pointer-events-auto text-white" style="text-shadow: 2px 4px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.5);">${projeto.titulo}</h2>
+              <p class="text-lg md:text-xl text-gray-200 font-medium max-w-xl mb-8 leading-relaxed pointer-events-auto" style="text-shadow: 1px 2px 4px rgba(0,0,0,0.9);">
+                ${projeto.descricao}
+              </p>
+              ${botaoHTML}
+            </div>
+          </section>
+        `;
+
+        htmlFinal += chunkHTML;
+      });
+      
+      container.innerHTML = htmlFinal;
+
+      ativarOlheiroDeVideos();
+    }
+
+    function ativarOlheiroDeVideos() {
+      const videos = document.querySelectorAll('.video-otimizado');
+      
+      const observer = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+          if (entrada.isIntersecting) {
+            entrada.target.play(); 
+          } else {
+            entrada.target.pause(); 
+          }
+        });
+      }, { threshold: 0.3 }); 
+
+      videos.forEach(video => {
+        observer.observe(video);
+      });
+    }
+
+    function enviarWhatsApp(event) {
+      event.preventDefault(); 
+      const nome = document.getElementById('wa-nome').value;
+      const projeto = document.getElementById('wa-projeto').value;
+      const mensagem = document.getElementById('wa-mensagem').value;
+      const telefone = "5519984400625"; 
+      const texto = `Olá V7 Motion! Meu nome é ${nome}.\nTenho interesse em um projeto de ${projeto}.\n\n"${mensagem}"`;
+      const url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
+      window.open(url, '_blank');
+    }
+
+    function abrirGaleria(idProjeto) {
+      const projeto = projetosGlobais.find(p => p.id === idProjeto);
+      if (!projeto || !projeto.fotos) return;
+      document.getElementById('modal-titulo').innerText = projeto.titulo;
+      document.getElementById('modal-categoria').innerText = projeto.categoria;
+      document.getElementById('modal-categoria').className = `${projeto.cor_destaque === 'red' ? 'text-red-500' : 'text-cyan-400'} font-mono text-sm tracking-widest uppercase`;
+      const grid = document.getElementById('modal-grid');
+      grid.innerHTML = projeto.fotos.map(foto => `
+        <div class="overflow-hidden rounded bg-zinc-900 border border-zinc-800 cursor-zoom-in group" onclick="abrirLightbox('${foto}')">
+          <img src="${foto}" alt="Foto da Galeria" loading="lazy" class="w-full h-auto object-cover group-hover:scale-105 group-hover:opacity-80 transition-all duration-500">
+        </div>
+      `).join('');
+      const modal = document.getElementById('modal-galeria');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; 
+      setTimeout(() => { modal.classList.remove('opacity-0'); }, 10);
+    }
+
+    function fecharGaleria() {
+      const modal = document.getElementById('modal-galeria');
+      modal.classList.add('opacity-0');
+      document.body.style.overflow = 'auto';
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        document.getElementById('modal-grid').innerHTML = '';
+      }, 300);
+    }
+
+    function abrirLightbox(srcFoto) {
+      document.getElementById('lightbox-img').src = srcFoto;
+      const modalLightbox = document.getElementById('modal-lightbox');
+      modalLightbox.classList.remove('hidden');
+      setTimeout(() => { modalLightbox.classList.remove('opacity-0'); }, 10);
+    }
+
+    function fecharLightbox() {
+      const modalLightbox = document.getElementById('modal-lightbox');
+      modalLightbox.classList.add('opacity-0');
+      setTimeout(() => {
+        modalLightbox.classList.add('hidden');
+        document.getElementById('lightbox-img').src = '';
+      }, 300);
+    }
+
+    carregarProjetos();
+    iniciarSlideshow();
+  </script>
+
+</body>
+</html>
