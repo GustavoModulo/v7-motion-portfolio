@@ -5,182 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin | V7 Motion</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body class="bg-zinc-950 text-white font-sans p-8">
-    <div class="max-w-4xl mx-auto">
-        <header class="flex justify-between items-center mb-12 border-b border-zinc-800 pb-6">
-            <h1 class="text-3xl font-black uppercase tracking-tighter">Painel <span class="text-red-600">Admin</span></h1>
-            <a href="index.html" class="text-zinc-500 hover:text-white transition-colors">Voltar ao Site</a>
-        </header>
+    <div id="login-section" class="max-w-md mx-auto bg-zinc-900 p-8 rounded-xl border border-zinc-800">
+        <h2 class="text-xl font-bold mb-6 uppercase tracking-widest text-zinc-400">Login Admin</h2>
+        <form id="login-form" class="flex flex-col gap-4">
+            <input type="email" id="email" required placeholder="Email" class="bg-black border border-zinc-800 p-3 rounded focus:border-red-600 outline-none transition-all">
+            <input type="password" id="password" required placeholder="Senha" class="bg-black border border-zinc-800 p-3 rounded focus:border-red-600 outline-none transition-all">
+            <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-black py-3 uppercase tracking-[0.2em] transition-all rounded">Entrar</button>
+        </form>
+        <p id="login-error" class="text-red-500 text-sm mt-4 hidden"></p>
+    </div>
 
-        <section class="bg-zinc-900 p-8 rounded-xl border border-zinc-800 mb-12">
-            <h2 class="text-xl font-bold mb-6 uppercase tracking-widest text-zinc-400">Adicionar Novo Projeto</h2>
-            <form id="admin-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input type="text" id="titulo" required placeholder="Título do Projeto" class="bg-black border border-zinc-800 p-3 rounded focus:border-red-600 outline-none transition-all">
-                <input type="text" id="categoria" required placeholder="Categoria (Ex: S15 • Assetto Corsa)" class="bg-black border border-zinc-800 p-3 rounded focus:border-red-600 outline-none transition-all">
-                
-                <select id="tipo" class="bg-black border border-zinc-800 p-3 rounded focus:border-red-600 outline-none transition-all">
-                    <option value="video">Tipo: Vídeo</option>
-                    <option value="galeria">Tipo: Galeria de Fotos</option>
-                </select>
-
-                <select id="cor_destaque" class="bg-black border border-zinc-800 p-3 rounded focus:border-red-600 outline-none transition-all">
-                    <option value="red">Cor: Vermelho (Vida Real)</option>
-                    <option value="cyan">Cor: Ciano (Simulador)</option>
-                </select>
-
-                <div class="md:col-span-2 flex flex-col gap-3 bg-black border border-zinc-800 p-4 rounded focus-within:border-red-600 transition-all">
-                    <label class="text-zinc-500 text-xs font-bold uppercase tracking-widest">Upload de Mídia de Fundo</label>
-                    <input type="file" id="arquivo_midia" accept="video/mp4, image/jpeg, image/png, image/webp" class="text-white file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-bold file:bg-red-600 file:text-white hover:file:bg-red-700 cursor-pointer">
-                    
-                    <div class="flex items-center gap-4 my-2">
-                        <div class="flex-1 h-[1px] bg-zinc-800"></div>
-                        <span class="text-zinc-600 text-xs font-bold">OU</span>
-                        <div class="flex-1 h-[1px] bg-zinc-800"></div>
-                    </div>
-
-                    <input type="text" id="video_fundo" placeholder="Se não for fazer upload, cole um link direto aqui" class="bg-transparent border border-zinc-800 p-3 rounded focus:border-red-600 outline-none transition-all w-full text-sm">
+    <div id="admin-content" class="hidden">
+        <div class="max-w-4xl mx-auto">
+            <header class="flex justify-between items-center mb-12 border-b border-zinc-800 pb-6">
+                <h1 class="text-3xl font-black uppercase tracking-tighter">Painel <span class="text-red-600">Admin</span></h1>
+                <div class="flex gap-4">
+                    <button id="logout-btn" class="text-zinc-500 hover:text-white transition-colors">Logout</button>
+                    <a href="index.html" class="text-zinc-500 hover:text-white transition-colors">Voltar ao Site</a>
                 </div>
-                
-                <textarea id="descricao" required placeholder="Descrição Curta" rows="3" class="bg-black border border-zinc-800 p-3 rounded focus:border-red-600 outline-none transition-all md:col-span-2"></textarea>
-                
-                <button type="submit" class="md:col-span-2 bg-red-600 hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-black py-4 uppercase tracking-[0.2em] transition-all rounded">Salvar Projeto</button>
-            </form>
-        </section>
+            </header>
 
-        <section>
-            <h2 class="text-xl font-bold mb-6 uppercase tracking-widest text-zinc-400">Projetos Atuais</h2>
-            <div id="lista-projetos" class="flex flex-col gap-4"></div>
-        </section>
+            <section class="bg-zinc-900 p-8 rounded-xl border border-zinc-800 mb-12">
+                <h2 class="text-xl font-bold mb-6 uppercase tracking-widest text-zinc-400">Adicionar Novo Projeto</h2>
+                <form id="admin-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input type="text" id="titulo" required placeholder="Título do Projeto" class="bg-black border border-zinc-800 p-3 rounded focus:border-red-600 outline-none transition-all">
+                    <input type="text" id="categoria" required placeholder="Categoria (Ex: S15 • Assetto Corsa)" class="bg-black border border-zinc-800 p-3 rounded focus:border-red-600 outline-none transition-all">
+                    
+                    <select id="tipo" class="bg-black border border-zinc-800 p-3 rounded focus:border-red-600 outline-none transition-all">
+                        <option value="video">Vídeo</option>
+                        <option value="galeria">Galeria de Fotos</option>
+                    </select>
+
+                    <select id="cor_destaque" class="bg-black border border-zinc-800 p-3 rounded focus:border-red-600 outline-none transition-all">
+                        <option value="red">Vida Real (Vermelho)</option>
+                        <option value="cyan">Simulador (Ciano)</option>
+                    </select>
+
+                    <div class="md:col-span-2 flex flex-col gap-3 bg-black border border-zinc-800 p-4 rounded focus-within:border-red-600 transition-all">
+                        <label class="text-zinc-500 text-xs font-bold uppercase tracking-widest">Selecione Capa + Vídeo (ou todas as fotos da galeria)</label>
+                        <input type="file" id="arquivo_midia" accept="video/mp4, image/jpeg, image/png, image/webp" multiple class="text-white file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-bold file:bg-red-600 file:text-white hover:file:bg-red-700 cursor-pointer">
+                        <input type="text" id="link_manual" placeholder="Link do YouTube (Opcional se houver upload de vídeo)" class="bg-transparent border border-zinc-800 p-3 rounded focus:border-red-600 outline-none transition-all w-full text-sm">
+                    </div>
+                    
+                    <textarea id="descricao" required placeholder="Descrição do projeto..." rows="3" class="bg-black border border-zinc-800 p-3 rounded focus:border-red-600 outline-none transition-all md:col-span-2"></textarea>
+                    
+                    <button type="submit" id="btn-submit" class="md:col-span-2 bg-red-600 hover:bg-red-700 disabled:opacity-50 text-white font-black py-4 uppercase tracking-widest transition-all rounded">Publicar Projeto</button>
+                </form>
+            </section>
+
+            <section>
+                <h2 class="text-xl font-bold mb-6 uppercase tracking-widest text-zinc-400">Projetos Atuais</h2>
+                <div id="lista-projetos" class="flex flex-col gap-4"></div>
+            </section>
+        </div>
     </div>
 
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+        const SUPABASE_URL = 'https://gwikdmlmjogxvntdezck.supabase.co';
+        const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd3aWtkbWxtam9neHZudGRlemNrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTkxNjMsImV4cCI6MjA5MzgzNTE2M30.cFnbIMMHJm9tOmqJm3ugbGe8IE4eS6u2aD5zTSaEoUE';
+        const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-        // Suas chaves do Firebase (V7 Motion)
-        const firebaseConfig = {
-          apiKey: "AIzaSyB1UCRutMhoZq740v_xwiCOdK9DS7oJ7Q0",
-          authDomain: "v7-motion.firebaseapp.com",
-          projectId: "v7-motion",
-          storageBucket: "v7-motion.firebasestorage.app",
-          messagingSenderId: "828939613614",
-          appId: "1:828939613614:web:3f72ab60e3eae198c5043f"
-        };
+        let user = null;
 
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
+        async function checkAuth() {
+            const { data: { user } } = await _supabase.auth.getUser();
+            if (user) {
+                document.getElementById('login-section').classList.add('hidden');
+                document.getElementById('admin-content').classList.remove('hidden');
+                carregarProjetos();
+            } else {
+                document.getElementById('login-section').classList.remove('hidden');
+                document.getElementById('admin-content').classList.add('hidden');
+            }
+        }
+
+        document.getElementById('login-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const { error } = await _supabase.auth.signInWithPassword({ email, password });
+            if (error) {
+                document.getElementById('login-error').textContent = error.message;
+                document.getElementById('login-error').classList.remove('hidden');
+            } else {
+                document.getElementById('login-error').classList.add('hidden');
+                checkAuth();
+            }
+        });
+
+        document.getElementById('logout-btn').addEventListener('click', async () => {
+            await _supabase.auth.signOut();
+            checkAuth();
+        });
 
         async function carregarProjetos() {
-            try {
-                const querySnapshot = await getDocs(collection(db, "projetos"));
-                const lista = document.getElementById('lista-projetos');
-                lista.innerHTML = '';
-                
-                if(querySnapshot.empty) {
-                    lista.innerHTML = '<p class="text-zinc-600 text-sm">Nenhum projeto cadastrado ainda.</p>';
-                    return;
-                }
-
-                querySnapshot.forEach((projetoDoc) => {
-                    const p = projetoDoc.data();
-                    lista.innerHTML += `
-                        <div class="bg-zinc-900 p-4 border border-zinc-800 flex justify-between items-center rounded">
-                            <div>
-                                <p class="font-bold uppercase tracking-tighter">${p.titulo}</p>
-                                <p class="text-xs text-zinc-500">${p.categoria}</p>
-                            </div>
-                            <button onclick="removerProjeto('${projetoDoc.id}')" class="text-red-600 hover:text-red-400 text-xs font-bold uppercase cursor-pointer transition-colors">Excluir</button>
-                        </div>
-                    `;
-                });
-            } catch (erro) {
-                console.error("Erro ao carregar do Firebase:", erro);
-                document.getElementById('lista-projetos').innerHTML = '<p class="text-red-500 text-sm">Erro ao carregar projetos. O banco de dados foi criado no Firebase?</p>';
-            }
+            const { data, error } = await _supabase.from('projetos').select('*').order('data', { ascending: false });
+            if (error) return;
+            document.getElementById('lista-projetos').innerHTML = data.map(p => `
+                <div class="bg-zinc-900 p-4 border border-zinc-800 flex justify-between items-center rounded shadow-sm">
+                    <div><p class="font-bold uppercase tracking-tight">${p.titulo}</p><p class="text-[10px] text-zinc-500">${p.tipo.toUpperCase()}</p></div>
+                    <button onclick="removerProjeto('${p.id}')" class="text-red-600 hover:text-red-400 font-bold uppercase text-xs cursor-pointer">Excluir</button>
+                </div>
+            `).join('');
         }
 
         document.getElementById('admin-form').addEventListener('submit', async (e) => {
             e.preventDefault();
-            
-            const botaoSalvar = e.target.querySelector('button[type="submit"]');
-            const textoOriginalBotao = botaoSalvar.innerText;
-            
-            const arquivoInput = document.getElementById('arquivo_midia').files[0];
-            let urlMidiaFinal = document.getElementById('video_fundo').value; 
-            
-            botaoSalvar.innerText = "Salvando... Aguarde";
-            botaoSalvar.disabled = true;
+            const btn = document.getElementById('btn-submit');
+            const arquivos = document.getElementById('arquivo_midia').files;
+            const linkManual = document.getElementById('link_manual').value;
+            let videoUrl = "";
+            let imageFiles = [];
+
+            btn.disabled = true;
+            btn.innerText = "Processando Arquivos...";
 
             try {
-                // Se escolheu um arquivo, manda pro Cloudinary
-                if (arquivoInput) {
-                    botaoSalvar.innerText = "Enviando Mídia (Pode demorar)...";
+                for (let i = 0; i < arquivos.length; i++) {
+                    const file = arquivos[i];
+                    const fileName = `${Date.now()}_${file.name}`;
+                    const { data, error } = await _supabase.storage.from('midia').upload(`public/${fileName}`, file);
+                    if (error) throw error;
+                    const { data: { publicUrl } } = _supabase.storage.from('midia').getPublicUrl(`public/${fileName}`);
                     
-                    const CLOUDINARY_CLOUD_NAME = "doyqcup0h"; 
-                    const CLOUDINARY_UPLOAD_PRESET = "kxomhbwr"; 
-
-                    const formData = new FormData();
-                    formData.append('file', arquivoInput);
-                    formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
-
-                    const respostaCloudinary = await fetch(`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/auto/upload`, {
-                        method: 'POST',
-                        body: formData
-                    });
-
-                    const dadosCloudinary = await respostaCloudinary.json();
-                    
-                    if (dadosCloudinary.secure_url) {
-                        urlMidiaFinal = dadosCloudinary.secure_url; 
+                    if (file.type.includes('video')) {
+                        videoUrl = publicUrl;
                     } else {
-                        throw new Error("Erro ao gerar link no Cloudinary");
+                        imageFiles.push(publicUrl);
                     }
                 }
 
-                if (!urlMidiaFinal) {
-                    alert("Por favor, selecione um arquivo para upload OU cole um link direto!");
-                    botaoSalvar.innerText = textoOriginalBotao;
-                    botaoSalvar.disabled = false;
-                    return;
-                }
+                
+                const videoFinal = linkManual || videoUrl || (imageFiles.length > 0 ? imageFiles[0] : "");
+                const fotosFinal = imageFiles;
 
-                botaoSalvar.innerText = "Salvando no Banco de Dados...";
-
-                const novoProjeto = {
+                const { error: dbError } = await _supabase.from('projetos').insert([{
                     titulo: document.getElementById('titulo').value,
                     categoria: document.getElementById('categoria').value,
                     tipo: document.getElementById('tipo').value,
                     cor_destaque: document.getElementById('cor_destaque').value,
-                    video_fundo: urlMidiaFinal, 
-                    descricao: document.getElementById('descricao').value,
-                    data: new Date() // Salva a data atual para ordenar depois
-                };
+                    video_fundo: videoFinal,
+                    fotos: fotosFinal,
+                    descricao: document.getElementById('descricao').value
+                }]);
 
-                // Salva no Firestore
-                await addDoc(collection(db, "projetos"), novoProjeto);
-                
-                alert("Projeto salvo com sucesso!");
-                document.getElementById('admin-form').reset();
-                carregarProjetos();
-
-            } catch (erro) {
-                console.error("Erro:", erro);
-                alert("Ocorreu um erro ao salvar. O banco de dados (Firestore) está ativo no modo de teste?");
-            } finally {
-                botaoSalvar.innerText = textoOriginalBotao;
-                botaoSalvar.disabled = false;
-            }
+                if (dbError) throw dbError;
+                location.reload();
+            } catch (err) { alert(err.message); btn.disabled = false; btn.innerText = "Publicar Projeto"; }
         });
 
-        window.removerProjeto = async (id) => {
-            if(confirm("Tem certeza que deseja excluir este projeto?")) {
-                await deleteDoc(doc(db, "projetos", id));
-                carregarProjetos();
-            }
-        };
-
-        carregarProjetos();
+        window.removerProjeto = async (id) => { if(confirm("Deseja apagar?")) { await _supabase.from('projetos').delete().eq('id', id); carregarProjetos(); } };
+        
+        // Temporary: sign out on load to force login every time (remove in production)
+        await _supabase.auth.signOut();
+        checkAuth();
     </script>
 </body>
 </html>

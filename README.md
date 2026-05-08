@@ -5,7 +5,7 @@
 
 > **Portfólio de alta performance e renderização dinâmica para Filmmakers do nicho automotivo.**
 
-Este projeto é uma aplicação web imersiva desenvolvida para exibir produções audiovisuais (focadas em Drift Real e Simuladores). Ele utiliza injeção de conteúdo via JSON para facilitar a atualização, garantindo otimização extrema de mídia e integração direta com o WhatsApp para captação de clientes.
+Este projeto é uma aplicação web imersiva desenvolvida para exibir produções audiovisuais (focadas em Drift Real e Simuladores). Ele utiliza Supabase para armazenamento e gerenciamento de dados, garantindo otimização extrema de mídia e integração direta com o WhatsApp para captação de clientes.
 
 ---
 
@@ -20,8 +20,8 @@ Este projeto é uma aplicação web imersiva desenvolvida para exibir produçõe
 
 ## 🚀 Funcionalidades
 
-### ⚙️ Motor Dinâmico de Conteúdo (`projetos.json`)
-* **Gestão Simplificada:** O portfólio é alimentado por um banco de dados estático. O usuário pode adicionar novos vídeos ou ensaios fotográficos apenas preenchendo o arquivo JSON, sem precisar alterar o HTML.
+### ⚙️ Motor Dinâmico de Conteúdo (Supabase)
+* **Gestão Simplificada:** O portfólio é alimentado por um banco de dados Supabase. O usuário pode adicionar novos vídeos ou ensaios fotográficos via painel admin, sem precisar alterar o HTML.
 * **Filtros em Tempo Real:** Sistema inteligente (Vanilla JS) que alterna entre as categorias ("Vida Real" vs "Simulador") e tipos de mídia ("Vídeos" vs "Fotos") de forma instantânea, manipulando o DOM sem recarregar a página.
 
 ### 🎥 Otimização de Mídia e Performance
@@ -38,7 +38,7 @@ Este projeto é uma aplicação web imersiva desenvolvida para exibir produçõe
 
 * **Frontend:** HTML5, Tailwind CSS.
 * **Linguagem:** JavaScript (ES6+) "Vanilla" (Sem dependência de bibliotecas ou frameworks pesados).
-* **Data Fetching:** API nativa `fetch()` para consumo do JSON.
+* **Data Fetching:** API do Supabase para consumo dinâmico de dados.
 
 ---
 
